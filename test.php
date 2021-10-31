@@ -38,7 +38,7 @@ class TwitterApi
         $count = 0;
         $next_token = '';
         $tweet_count = 1;
-         $tweets = [];
+        $tweets = [];
         do {
             $getfield = "?max_results=100&user.fields=created_at&tweet.fields=created_at" . (!empty($next_token) ? "&pagination_token=$next_token" : '');
             $twitter = new TwitterAPIExchange($this->settings);
